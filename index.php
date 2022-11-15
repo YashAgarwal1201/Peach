@@ -14,15 +14,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Blueberry (a speech recognition mini project)</title>
+	<title>Peach</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body id="body-id">
-	<h1 title="Speech Recognition mini project">Blueberry</h1>
+	<h1 title="Speech Recognition mini project">Peach</h1>
 
 	<div class="speech-class" id="speech-id">
 		<section id="output-id"></section>
@@ -45,20 +48,6 @@
 	<?php
 //print_r($_SESSION);
 ?>
-	<!--div>
-		<button onclick="let arg = prompt('Enter a value'); console.log(isPalindrome(arg));">isPalindrome</button>
-		<button onclick="let arg2 = prompt('Enter a value'); console.log(isEven(parseInt(arg2)));">isEven</button>
-		<button onclick="console.log(arrayReverse([1, 2, 3, 4, 5, 5, 2, 3, 1, 7]));">arrayReverse</button>
-		<button onclick="console.log(arraySort(['apple', 'buffalo', 'banana', 'amino']));">arraySort</button>
-		<button onclick="console.log(countInstance(10000, 0));">countInstance</button>
-		<button onclick="console.log(isPrime(541));">isPrime</button>
-		<button onclick="console.log(primeNumbers(1,100));">PrimeNumbers</button>
-		<button onclick="console.log(countDigits(1233463));">countDigits</button>
-		<button onclick="console.log(typeof(typeof(10)))">lick</button>
-	</div-->
 </body>
-<!--script src="https://cdn.jsdelivr.net/npm/daq-proc/dist/daq-proc.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.min.js" integrity="sha512-a0tGMh5o0nCoRDiMVaSmiWgB9s/JqfC+PQZHWANTzIhasvm5eH9NkWTmJ4WloaQWLT8fEzRBjvADgFNDf0WusQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script-->
 <script src="index.js"></script>
-<script src="userDefinedFunctions.js"></script>
 </html>
