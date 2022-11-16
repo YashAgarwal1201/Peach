@@ -75,17 +75,7 @@ function add_new_user($u_name, $u_password, $u_dob, $u_mname, $u_email) { // add
 			$fp = fopen( $jsonFileName, "w+");
 			fwrite($fp, $jsonData2);
 			fclose($fp);
-			$jsonFileData = stripslashes(html_entity_decode(file_get_contents($jsonFileName))); // get the json file content
-			$jsonData = json_decode($jsonFileData, true);
-			foreach ($jsonData['allUsersDetails'] as $key => $value) {
-				foreach ($value as $key2 => $value2) {
-					if ($u_password == $value2) {
-						$i_result = true; // index 0
-						$mainProfile = $jsonData['allUsersDetails'][$key]; // index 1
-						return array($i_result, $mainProfile);
-					}
-				}
-			}
+			return true;
 		}
 	}
 }

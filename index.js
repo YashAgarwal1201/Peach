@@ -134,22 +134,19 @@ function mainFunction() {
 
 		}
 	})
+	$('#message-id').hover(() => {
+		typeit.go()
+		if(typeit.is('frozen'))
+			typeit.unfreeze()
+	}, () => {
+		if(typeit.is('started'))
+			typeit.freeze()
+		else
+			typeit.reset()
+	})
 }
 
 // after the document is ready mainFunction() will be called
 $(document).ready(function () {
 	mainFunction()
 })
-
-
-/*
-function Component() {
-			return (
-				<>
-					<p>Hello</p>
-				</>
-			)
-		}
-
-		const root = ReactDOM.createRoot(document.getElementById('body-id'))
-		root.render(<Component/>)*/

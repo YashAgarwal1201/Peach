@@ -39,11 +39,20 @@
 		<section class="user-form" id="user-form-id"></section>
 	</div>
 	<div class="landing-class2" id="landing-id2">
-		
+		<p class="a2a_kit a2a_kit_size_32 a2a_default_style">
+			<!--a class="a2a_dd" href="https://www.addtoany.com/share"></a-->
+			<a class="a2a_button_email" title="Click to share through E-mail"></a>
+			<a class="a2a_button_whatsapp" title="Click to share through WhatsApp"></a>
+			<a class="a2a_button_linkedin" title="Click to share through LinkedIn"></a>
+			<a class="a2a_button_telegram" title="Click to share through Telegram"></a>
+			<a class="a2a_button_google_gmail" title="Click to share through GMail"></a>
+			<a class="a2a_button_reddit" title="Click to share through Reddit"></a>
+		</p>
 	</div>
 <?php
 //print_r($_SESSION);
 ?>
 </body>
 <script src="index.js"></script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 </html>
