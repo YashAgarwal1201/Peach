@@ -3,6 +3,7 @@
 	"mainAccounts" : ["@main_user12", "@main_user22", "@main_user32"],
 	"allUsersDetails" : {
 		"@main_user12" : {
+			"masterPassword" : "@main_user12",
 			"primaryUser" : {
 				"userName" : "@main_user12",
 				"password" : "@main_user12",
@@ -10,7 +11,7 @@
 				"isPrimary" : true,
 				"userDetails" : {
 					"age" : 22,
-					"gender" : "male"
+					"profileType" : "adult"
 				} 
 			},
 			"user2" : {
@@ -20,11 +21,12 @@
 				"isPrimary" : false,
 				"userDetails" : {
 					"age" : 22,
-					"gender" : "male"
+					"profileType" : "kids"
 				} 
 			}
 		},
 		"@main_user22" : {
+			"masterPassword" : "@main_user22",
 			"primaryUser" : {
 				"userName" : "@main_user22",
 				"password" : "@main_user22",
@@ -32,7 +34,7 @@
 				"isPrimary" : true,
 				"userDetails" : {
 					"age" : 22,
-					"gender" : "male"
+					"profileType" : "adult"
 				} 
 			},
 			"user2" : {
@@ -42,10 +44,9 @@
 				"isPrimary" : false,
 				"userDetails" : {
 					"age" : 22,
-					"gender" : "male"
+					"profileType" : "kids"
 				} 
 			}
 		}
-
 	}
 }

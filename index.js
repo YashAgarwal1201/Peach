@@ -47,8 +47,8 @@ var infoVar = '<h2>How-to-Use</h2>\
 					<input type="password" name="Password" id="p1" required title="Click to Enter your Password" autocomplete="off">\
 				</div>\
 				<div class="c5">\
-					<label for="Password2">Confirm Password</label><br>\
-					<input type="password" name="Password2" id="p2" required title="Click to Re-Enter your Password" autocomplete="off"><br>\
+					<label for="Name2">Your Name</label><br>\
+					<input type="text" name="Name2" id="p2" required title="Click to Enter your Name" autocomplete="off"><br>\
 					<span id="a1"></span>\
 				</div>\
 				<div class="c6">\
@@ -94,7 +94,7 @@ function loginForm (arg) {
 		url: 'ajaxHandler.php',
 		type: 'POST',
 		dataType: 'json',
-		data: { fData: $(arg.target).serialize() },
+		data: { fData: $(arg.target).serialize(), fType: arg.target.id },
 		success: (argument) => {
 			userLogin = true
 			console.log(argument)
@@ -133,19 +133,6 @@ function mainFunction() {
 		else {
 
 		}
-	})
-	$('#p2').keyup(function () { // to check passwords' match in register form
-		var val1 = $('#p2').val();
-		var val2 = $('#p1').val();
-		if (val1 !== '') 
-		{
-			if (val2 !== val1) 
-				$('#a1').text('Not Matching');
-			else
-				$('#a1').text('');	
-		}
-		else
-			$('#a1').text('');
 	})
 }
 

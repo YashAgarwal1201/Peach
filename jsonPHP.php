@@ -20,10 +20,77 @@ function check_user_identity($u_name, $u_password) {
 				}
 			}
 		}
+		/*else {
+			$newUser = array()
+			array_push($jsonData['allUsersDetails'], $newUser);
+		}*/
 	}
 }
 
-//check_user_identity('@main_user12','@main_user12');
+function add_new_user($u_name, $u_password, $u_dob, $u_mname, $u_email) { // add new main user
+	GLOBAL $jsonData, $jsonFileName;
+	if (strtolower(gettype($jsonData)) == 'array') {
+		if(!in_array($u_name, array_keys($jsonData['allUsersDetails']))) {
+			/*$userObj = {
+				"masterPassword": $u_password,
+				"primaryUser": {
+					"userName" : $u_name,
+					"password" : $u_password,
+					"name" : $u_mname,
+					"isPrimary" : true,
+					"userDetails" : {
+						"age" : 22,
+						"email" : $u_email
+					}
+				}
+			};*/
+			$newUser = array( 
+				"masterPassword"=> $u_password,
+				"primaryUser"=> array (
+					"userName" => $u_name,
+					"password" => $u_password,
+					"name" => $u_mname,
+					"isPrimary" => true,
+					"userDetails" => array(
+						"age" => 22,
+						"email" => $u_email
+					)
+				),
+				"user2" => array(
+					"userName" => "",
+					"password" => "",
+					"name" => "", 
+					"isPrimary" => false,
+					"userDetails" => array( 
+						"age" => null,
+						"profileType" => "kids"
+					)
+				)
+			);
+			//$newUser = array($u_name => $userObj);
+			//array_push($jsonData['allUsersDetails'][$u_name], $newUser);
+			$jsonData['allUsersDetails'][$u_name] = $newUser;
+			$jsonData2 = json_encode($jsonData);
+
+			$fp = fopen( $jsonFileName, "w+");
+			fwrite($fp, $jsonData2);
+			fclose($fp);
+			$jsonFileData = stripslashes(html_entity_decode(file_get_contents($jsonFileName))); // get the json file content
+			$jsonData = json_decode($jsonFileData, true);
+			foreach ($jsonData['allUsersDetails'] as $key => $value) {
+				foreach ($value as $key2 => $value2) {
+					if ($u_password == $value2) {
+						$i_result = true; // index 0
+						$mainProfile = $jsonData['allUsersDetails'][$key]; // index 1
+						return array($i_result, $mainProfile);
+					}
+				}
+			}
+		}
+	}
+}
+
+//check_user_identity('@main_userYash','@main_userYash');
 /*
 //echo $jsonFileData;
 
