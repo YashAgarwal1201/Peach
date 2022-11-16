@@ -3,8 +3,8 @@
 $jsonFileName = 'userData2.json';
 $jsonFileData = stripslashes(html_entity_decode(file_get_contents($jsonFileName))); // get the json file content
 $jsonData = json_decode($jsonFileData, true); // decode the string format json file data in associative array format
-//print_r($jsonData);
 
+// function to check user's identity
 function check_user_identity($u_name, $u_password) {
 	GLOBAL $jsonData;
 	if (strtolower(gettype($jsonData)) == 'array') {
