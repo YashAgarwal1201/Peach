@@ -22,27 +22,10 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script-->
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
 </head>
 
 <body id="body-id">
-	<!--div class="speech-class" id="speech-id">
-		<section id="output-id"></section>
-		<section class="message" id="message-id"></section>
-		<section class="command-btns" id="command-btns-id">
-			<button id="start-btn" onclick="" title="click to start speech recognition">
-				<i class="material-icons-outlined">mic</i>
-			</button>
-			<button id="stop-btn" onclick="" title="click to stop speech recognition">
-				<i class="material-icons-outlined">stop</i>
-			</button>
-			<button id='speak-btn'><i class="material-icons-outlined">campaign</i></button>
-			<button id='info-btn' title="click to view 'how to use' info"><i class="material-icons-outlined">info</i></button>
-		</section>
-	</div>
-	<div class="results" id="results-id">
-		<button onclick="$('#results-id').hide()"><i class="material-icons-outlined">close</i></button>
-		<section class="user-form" id="user-form-id"></section>
-	</div-->
 	<h1 style="text-align: center;">Peach</h1>
 	<div class="landing-class1" id="landing-id2">
 		<section class="message" id="message-id"></section>
@@ -58,7 +41,7 @@
 	<div class="landing-class2" id="landing-id2">
 		
 	</div>
-	<?php
+<?php
 //print_r($_SESSION);
 ?>
 </body>

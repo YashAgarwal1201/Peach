@@ -134,7 +134,7 @@ form {
 	align-items: flex-start; }
 form .fields { 
 	width: 100%; }
-form .fields .c1, .c2 {
+form .fields .c1, .c2, .c3, .c4, .c5 {
 	border: 3px solid var(--color4); 
 	padding: 7px;
 	margin: 5px; 
